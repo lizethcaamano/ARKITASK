@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AsistenciaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('asistencia', 'AsistenciaController');
+
+Route::resource('catalogo', 'CatalogoController');
+
+Route::resource('grupos', 'GruposTrabajoController');
