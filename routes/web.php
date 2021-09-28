@@ -16,10 +16,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+
 });
+
 
 Route::resource('asistencia', 'AsistenciaController');
 
 Route::resource('catalogo', 'CatalogoController');
 
-Route::resource('grupos', 'GruposTrabajoController');
+
+Route::resource('proyecto', 'ProyectoController');
+
+Route::resource('Usuario','UsuarioController');
+
+Route::resource('Encargado','EncargadoProyectoController');
+
+Route::resource('Grupo','GruposTrabajoController');
+-
+Route::resource('actividades', 'ActividadesController');
+
+Route::resource('entregables', 'EntregablesController');
+

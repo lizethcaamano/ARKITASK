@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Entregables;
 use Illuminate\Http\Request;
-use App\GrupoTrabajo;
 
-class GruposTrabajoController extends Controller
+class EntregablesController extends Controller
 {
-     /**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $grupos = GrupoTrabajo::paginate(10);
-
-        return view('GrupoTrabajo.Index')->with('grupos', $grupos);
+        $Entregables = Entregables::paginate(15);
+        return view('ModuloEntregables.index')
+                    ->with("Entregables", $Entregables);
     }
 
     /**
@@ -26,8 +26,7 @@ class GruposTrabajoController extends Controller
      */
     public function create()
     {
-        return view('MolduloGruposTrabajo.Crear');
-        return view('GrupoTrabajo.create');
+        return view('ModuloEntregables.createEntregable');
     }
 
     /**
@@ -38,13 +37,13 @@ class GruposTrabajoController extends Controller
      */
     public function store(Request $request)
     {
-        $grupo = new GrupoTrabajo();
 
-        $grupo -> CodigoGrupo = $request -> input('codigo');
-        $grupo -> FechaInicio = $request -> input('inicio');
-        $grupo -> FechaDesactivacion = $request -> input('desactivacion');
-        $grupo -> save();
-        return redirect ('Grupo');
+        $nuevoentregable = new Entregables();
+        $nuevoentregable -> URLarchivo = $request -> input("urlarchivo");
+        $nuevoentregable ->save();
+
+    return redirect('entregables')
+          ->with("mensaje_exito", "Archivo registrado exitosamente");
     }
 
     /**
@@ -55,9 +54,10 @@ class GruposTrabajoController extends Controller
      */
     public function show($id)
     {
-        $grupo= GrupoTrabajo::find($id);
 
-        return view('GrupoTrabajo.show')->with('grupo', $grupo);
+        $entregable = Entregables::find($id);
+
+        return view('ModuloEntregables.showEntregable') ->with('entregable', $entregable);
     }
 
     /**
@@ -68,9 +68,10 @@ class GruposTrabajoController extends Controller
      */
     public function edit($id)
     {
-        $grupo = GrupoTrabajo::find($id);
+        $entregable = Entregables::find($id);
 
-        return view('GrupoTrabajo.edit')->with('grupo', $grupo);
+        return view('ModuloEntregables.editEntregable')
+                ->with('entregable', $entregable);
     }
 
     /**
@@ -82,16 +83,14 @@ class GruposTrabajoController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $entregable = Entregables::find($id);
 
-        $grupo = GrupoTrabajo::find($id);
+        $entregable->URLarchivo = $request->input('urlarchivo');
+        $entregable->Estado = $request->input('estado');
+        $entregable->save();
 
-        $grupo -> CodigoGrupo = $request -> input('codigo');
-        $grupo -> FechaInicio = $request -> input('inicio');
-        $grupo -> FechaDesactivacion = $request -> input('desactivacion');
-        $grupo -> save();
-
-        return redirect('grupos')->with('actualizado', 'El grupo se ha actualizado exitosamente');
-        return redirect('Grupo')->with('actualizado', 'El grupo se ha actualizado exitosamente');
+    return redirect('entregables')
+          ->with("mensaje_exito", "Entregable  actualizado");
     }
 
     /**
