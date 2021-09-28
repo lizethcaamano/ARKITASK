@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::resource('proyecto', 'ProyectoController');
+
+Route::resource('Usuario','UsuarioController');
+
+
+Route::resource('Encargado','EncargadoProyectoController');
+Route::resource('Grupo','GruposTrabajoController');
