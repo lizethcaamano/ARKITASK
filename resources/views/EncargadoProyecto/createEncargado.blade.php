@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1 class="text-danger">Nuevo Encargado</h1>
-<form method="post" action="{{url('Usuario')}}">
+<form method="post" action="{{url('Encargado')}}">
     @csrf
     <div class="mb-4 mt-6">
     <label for="fechaInicio" class="form-label">Fecha de Inicio:</label>

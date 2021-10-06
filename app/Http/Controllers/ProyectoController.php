@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Proyecto;
-use Illuminate\Support\Facades\Validator;
+
+use App\Http\Requests\ProyectoRequest;
+
 class ProyectoController extends Controller
 {
     /**
@@ -35,39 +37,9 @@ class ProyectoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProyectoRequest $request)
     {
         
-        $reglas=[
-            "codigo"=> 'required|alpha|max:10',
-            "nombre"=> 'required|alpha|max:10',
-            "fechae"=> 'required',
-            "fechar"=> 'required'
-
-        ];
-
-        $mensajes = [
-            "required"=>"Campo requerido",
-            "alpha"=>"solo letras",
-            "max"=>"Debe tener maximo : :max caracteres"
-        ];
-        $validador =Validator::make($request->all(),$reglas,$mensajes);
-
-
-        
-        if ($validador->fails()){
-              
-            return redirect ('proyecto/create')->withErrors($validador)
-
-            
-           
-              
-            ->withInput();
-        }
-
- 
-  
-    
         //crear el nuevo recurso clienteDB::delete('delete users where name = ?', ['John'])
         $nuevoproyecto = new Proyecto();
         $nuevoproyecto->CodigoProyecto = $request->input("codigo");
@@ -115,36 +87,10 @@ class ProyectoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProyectoRequest $request, $id)
     {
-        $reglas=[
-            "codigo"=> 'required|alpha|max:10',
-            "nombre"=> 'required|alpha|max:10',
-            "fechae"=> 'required',
-            "fechar"=> 'required'
-
-        ];
-
-        $mensajes = [
-            "required"=>"Campo requerido",
-            "alpha"=>"solo letras",
-            "max"=>"Debe tener maximo : :max caracteres"
-        ];
-
-        $validador =Validator::make($request->all(),$reglas,$mensajes);
-
-
-     
-        if ($validador->fails()){
-              
-            return redirect ("proyecto/$id/editProyecto")
-            ->withErrors($validador)
-
-            
-           
-              
-            ->withInput();
-        }
+      
+      
 
         $proyecto= Proyecto::find($id);
         //actualizar el estado del recurso 

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Actividades;
 use GuzzleHttp\Promise\Create;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Validator;
 class ActividadesController extends Controller
 {
     /**
@@ -39,6 +39,11 @@ class ActividadesController extends Controller
     public function store(Request $request)
     {
 
+
+        
+
+ 
+  
          $nuevaactividad = new Actividades();
          $nuevaactividad -> NombreActividad = $request -> input("NombreActividad");
          $nuevaactividad -> Descripcion = $request -> input("descripcion");
@@ -89,6 +94,11 @@ class ActividadesController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+
+        
+       
+
 
         $actividad = Actividades::find($id);
 

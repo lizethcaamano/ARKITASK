@@ -21,7 +21,7 @@
   <label class="col-md-4 control-label" for="textinput">Codigo de grupo</label>  
   <div class="col-md-4">
   <input value="{{old('CodigoGrupo')}}" name="codigo"  type="text" placeholder="" class="form-control input-md">
-   <!-- <strong class="text-danger">{{$errors->first('codigo')}}</strong>  -->
+    <strong class="text-danger">{{$errors->first('codigo')}}</strong>  -->
   </div>
 </div>
 

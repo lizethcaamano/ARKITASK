@@ -47,7 +47,7 @@
 
 
 <div class="form-group">
-  <label class="col-md-4 control-label" for="Gmail">FechaRealizacion</label>  
+  <label class="col-md-4 control-label" for="Gmail">Fecha eNTREGA</label>  
   <div class="col-md-4">
   <input value="{{old('FechaEntrega')}}" name="fechae"  type="date" placeholder="" class="form-control input-md">
    <strong>{{$errors->first('fechae')}}</strong>
