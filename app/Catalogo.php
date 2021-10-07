@@ -13,12 +13,12 @@ class Catalogo extends Model
 
     public function Proyecto(){
 
-        return -> HasMany('App\Proyecto','IdCatalogoFK');
+        return $this -> HasMany('App\Proyecto','IdCatalogoFK');
     }
 
     public function Imagen(){
 
-        return -> HasMany('App\Imagen','IdCatalogoFK');
+        return $this -> HasMany('App\Imagen','IdCatalogoFK');
     }
 
 }

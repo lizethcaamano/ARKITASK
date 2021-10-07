@@ -16,13 +16,18 @@ public function asistencia(){
     return $this-> HasMany('App\Asistencia', 'IdUsuarioFK');  
 } 
 
-public function actividades(){
 
-    return $this -> HasMany('App\Actividades','IdUsuarioFk')
+public function proyecto(){ 
+return $this -> HasMany('App\Proyecto','IdUsuarioFK');
 }
 
-public function proyecto()
-return $this -> HasMany('App\Proyecto','IdUsuarioFK')
+public function  GrupoTrabajo (){
+    return $this ->belongsToMany('App\GrupoTrabajo','SeguimientoProyecto','IdUsuarioFK','IdGrupoFK','IdUsuario','IdGrupo','IdSeguimiento'); 
 
+}
 
+public function Actividades() {
+
+    return $this ->hasManyThrough('App\Actividades','App\SeguimientoProyecto','IdUsuarioFK','IdSeguimientoFK','IdUsuario','IdSeguimiento');
+}
 }

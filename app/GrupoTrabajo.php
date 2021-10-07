@@ -12,11 +12,11 @@ class GrupoTrabajo extends Model
     public $timestamps = false;
 
 public function Proyecto(){
-    return -> HasMany('App\Proyecto','IdGrupoFK');
+    return $this -> HasMany('App\Proyecto','IdGrupoFK');
 }
 
-public function Actividades(){
-    return -> HasMany('App\Actividades','IdGrupoFK');
-}
+ public function Actividades(){
+     return $this -> belongsToMany('App\Actividades','SeguimientoProyecto','IdGrupoFK','IdActividadesFK','IdGrupo','IdActividad','IdSeguimiento');
+ }
 
 }

@@ -12,6 +12,6 @@ class TipoProyecto extends Model
 
     public function Proyecto(){
 
-        return -> hasmany('App\Proyecto','IdTipoProyectoFk');
+        return $this -> hasmany('App\Proyecto','IdTipoProyectoFk');
     }
 }
