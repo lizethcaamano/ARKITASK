@@ -1,3 +1,5 @@
+@extends('Templates.administrador')
+@section('administrador_contenido')
 <h1>Listado de Catálagos</h1>
 
 @if (session("catalogo_creado"))
@@ -32,3 +34,4 @@
         @endforeach
     </tbody>
     <a href="{{url('catalogo/create')}}">Nuevo Catálogo</a>
+@endsection

@@ -1,3 +1,5 @@
+@extends('Templates.administrador')
+@section('administrador_contenido')
 <form method="POST"
 action="{{ url('entregables/' . $entregable->IdArchivo) }}"
  class="form-horizontal">
@@ -37,3 +39,4 @@ action="{{ url('entregables/' . $entregable->IdArchivo) }}"
     </fieldset>
 
     </form>
+@endsection
