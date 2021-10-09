@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Proyecto;
-use Illuminate\Support\Facades\Validator;
+
+use App\Http\Requests\ProyectoRequest;
+
 class ProyectoController extends Controller
 {
     /**
@@ -35,8 +37,9 @@ class ProyectoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProyectoRequest $request)
     {
+<<<<<<< HEAD
 
         $reglas=[
             "codigo"=> 'required|max:10',
@@ -68,6 +71,9 @@ class ProyectoController extends Controller
 
 
 
+=======
+        
+>>>>>>> fbe5ae87513e3253ebf60be067110414d9be4948
         //crear el nuevo recurso clienteDB::delete('delete users where name = ?', ['John'])
         $nuevoproyecto = new Proyecto();
         $nuevoproyecto->CodigoProyecto = $request->input("codigo");
@@ -115,8 +121,9 @@ class ProyectoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProyectoRequest $request, $id)
     {
+<<<<<<< HEAD
         $reglas=[
             "codigo"=> 'required|alpha|max:10',
             "nombre"=> 'required|alpha|max:10',
@@ -145,6 +152,10 @@ class ProyectoController extends Controller
 
             ->withInput();
         }
+=======
+      
+      
+>>>>>>> fbe5ae87513e3253ebf60be067110414d9be4948
 
         $proyecto= Proyecto::find($id);
         //actualizar el estado del recurso

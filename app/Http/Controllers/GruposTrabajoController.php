@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\GrupoTrabajo;
 
+use App\Http\Requests\GrupoRequest;
+
 class GruposTrabajoController extends Controller
 {
      /**
@@ -26,7 +28,7 @@ class GruposTrabajoController extends Controller
      */
     public function create()
     {
-        return view('MolduloGruposTrabajo.Crear');
+      
         return view('GrupoTrabajo.create');
     }
 
@@ -36,7 +38,7 @@ class GruposTrabajoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(GrupoRequest $request)
     {
         $grupo = new GrupoTrabajo();
 
@@ -80,7 +82,7 @@ class GruposTrabajoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(GrupoRequest $request, $id)
     {
 
         $grupo = GrupoTrabajo::find($id);
@@ -90,7 +92,7 @@ class GruposTrabajoController extends Controller
         $grupo -> FechaDesactivacion = $request -> input('desactivacion');
         $grupo -> save();
 
-        return redirect('grupos')->with('actualizado', 'El grupo se ha actualizado exitosamente');
+        
         return redirect('Grupo')->with('actualizado', 'El grupo se ha actualizado exitosamente');
     }
 

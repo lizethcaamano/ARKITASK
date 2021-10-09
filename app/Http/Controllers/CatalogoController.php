@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Validator;
 use App\Catalogo;
 use Illuminate\Http\Request;
 
@@ -36,6 +36,35 @@ class CatalogoController extends Controller
      */
     public function store(Request $request)
     {
+
+        $reglas=[
+            "participantes"=> 'required|alpha|max:10',
+            "empresa"=> 'required|alpha|max:10',
+            "area"=> 'required|alpha|max:10'
+
+        ];
+
+        $mensajes = [
+            "required"=>"Campo requerido",
+            "alpha"=>"solo letras",
+            "max"=>"Debe tener maximo : :max caracteres"
+        ];
+
+        $validador =Validator::make($request->all(),$reglas,$mensajes);
+
+
+     
+        if ($validador->fails()){
+              
+            return redirect ('catalogo/create')->withErrors($validador)
+
+
+            
+           
+              
+            ->withInput();
+        }
+
         $catalogonew= new Catalogo();
 
         $catalogonew -> NombreParticipantes=$request->input('participantes');

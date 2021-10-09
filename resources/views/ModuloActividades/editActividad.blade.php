@@ -24,7 +24,7 @@ action="{{ url('actividades/' . $actividad->IdActividad) }}"
         <label class="col-md-4 control-label" for="apellido">Descripcion:</label>
         <div class="col-md-4">
         <input value="{{ $actividad->Descripcion }}" name="descripcion" type="textarea" placeholder="" class="form-control input-md" >
-        <strong class="text-danger"> {{ $errors->first('decripcion')   }}  </strong>
+        <strong class="text-danger"> {{ $errors->first('Descripcion')   }}  </strong>
         </div>
       </div>
 

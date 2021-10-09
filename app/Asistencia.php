@@ -10,4 +10,7 @@ class Asistencia extends Model
     protected $table = "asistencia";
     protected $primaryKey="IdAsistencia";
     public $timestamps= false;
+
+
+    
 }

@@ -4,8 +4,8 @@
 <h1>Grupo: {{$grupo->CodigoGrupo}} </h1><br>
 
 <div class="container">
-<h3><strong>FechaInicio: {{$grupo->FechaInicio}}</strong></h3>
-<h3><strong>FechaDesactivacion: {{$grupo->FechaDesactivacion}}</strong></h3>
+<h3><strong>Fecha de Inicio: {{$grupo->FechaInicio}}</strong></h3>
+<h3><strong>Fecha de  Desactivacion: {{$grupo->FechaDesactivacion}}</strong></h3>
 </center>
 </div>
 
