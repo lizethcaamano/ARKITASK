@@ -1,3 +1,6 @@
+@extends('Templates.administrador')
+@section('administrador_contenido')
+
 <center><h1 class="text-info font-blockquote">Listado de Actividades</h1></center>
 @if (session("mensaje_exito"))
     <div>
@@ -37,3 +40,5 @@
 </table>
 
 <a  Class = "btn btn-info" href="{{ url('actividades/create') }}">Nueva Actividad</a>
+
+@endsection

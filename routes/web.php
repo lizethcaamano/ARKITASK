@@ -37,3 +37,7 @@ Route::resource('actividades', 'ActividadesController');
 
 Route::resource('entregables', 'EntregablesController');
 
+Route::get('plantilla', function () {
+    return view('Templates.administrador');
+
+});

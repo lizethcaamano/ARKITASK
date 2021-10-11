@@ -1,3 +1,5 @@
+@extends('Templates.administrador')
+@section('administrador_contenido')
 <h1>
     Entregable: {{  $entregable->URLarchivo  }}
 
@@ -10,3 +12,4 @@
 
 
 </h3>
+@endsection

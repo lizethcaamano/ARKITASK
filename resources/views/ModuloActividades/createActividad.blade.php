@@ -1,3 +1,5 @@
+@extends('Templates.administrador')
+@section('administrador_contenido')
 <form method="POST" action="{{ url('actividades') }}" class="form-horizontal">
     @csrf
     <fieldset>
@@ -52,3 +54,4 @@
 
     </fieldset>
     </form>
+@endsection

@@ -1,3 +1,6 @@
+@extends('Templates.administrador')
+@section('administrador_contenido')
+
 <h1>
     Actividad: {{  $actividad->NombreActividad  }}
 
@@ -11,3 +14,5 @@
    <li>{{$actividad->Estado}}</li>
 
 </h3>
+
+@endsection

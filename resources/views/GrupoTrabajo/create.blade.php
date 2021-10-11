@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,17 +10,21 @@
 </head>
 <body>
 
+=======
+@extends('Templates.administrador')
+@section('administrador_contenido')
+>>>>>>> refs/remotes/origin/master
 
 
 <form method="POST"  action="{{url('Grupo') }}" class="form-horizontal">
  @csrf
- <fieldset> 
+ <fieldset>
 <!-- Form Name -->
 <legend>Crear grupos de trabajo</legend>
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Codigo de grupo</label>  
+  <label class="col-md-4 control-label" for="textinput">Codigo de grupo</label>
   <div class="col-md-4">
   <input value="{{old('codigo')}}" name="codigo"  type="text" placeholder="" class="form-control input-md">
     <strong class="text-danger">{{$errors->first('codigo')}}</strong>
@@ -28,7 +33,7 @@
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Fecha de inicio</label>  
+  <label class="col-md-4 control-label" for="textinput">Fecha de inicio</label>
   <div class="col-md-4">
   <input value="{{old('inicio')}}" name="inicio"  type="date" placeholder="" class="form-control input-md">
   <strong>{{$errors->first('inicio')}}</strong>
@@ -42,7 +47,7 @@
 
 
 <div class="form-group">
-  <label class="col-md-4 control-label" >Fecha desactivacion</label>  
+  <label class="col-md-4 control-label" >Fecha desactivacion</label>
   <div class="col-md-4">
   <input value="{{old('desactivacion')}}" name="desactivacion"  type="date" placeholder="" class="form-control input-md">
   <div> 
@@ -62,7 +67,4 @@
 
 </fieldset>
 </form>
-
-
-</body>
-</html>
+@endsection
