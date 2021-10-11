@@ -14,7 +14,7 @@
                 <th>Codigo </th>
                 <th>Nombre</th>
                <th>Fecha de entrega</th>
-               <th>Ver detalles</th>
+             
                <th>Actualizar</th>
              
                <th>Cambiar estado</th>
@@ -25,9 +25,9 @@
            
             <tr>
                 <td>{{ $proyecto->CodigoProyecto}} </td>
-                <td>{{ $proyecto->NombreProyecto}} </td>
+                <td><a href="{{ url('proyecto/'.$proyecto->IdProyecto)}}" class="link-secondary">{{ $proyecto->NombreProyecto}}</a> </td>
                 <td> </td>
-                <td><a href="{{ url('proyecto/'.$proyecto->IdProyecto)}}">Ver detalles</a></td>
+                
                 <td>  <a href="{{url('proyecto/'.$proyecto->IdProyecto.'/edit' )}}">Actualizar</a></td>
          
                 <td> </td>

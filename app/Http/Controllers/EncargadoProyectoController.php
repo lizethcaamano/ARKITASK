@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\EncargadoProyecto;
 use Illuminate\Http\Request;
+use App\Http\Requests\EncargadoRequest;
 
 
 class EncargadoProyectoController extends Controller
@@ -35,7 +36,7 @@ class EncargadoProyectoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(EncargadoRequest $request)
     {
         $nuevoencargado = new Encargado();
         $nuevoencargado->FechaInicio = $request->input("fechaInicio");
@@ -79,7 +80,7 @@ class EncargadoProyectoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(EncargadoRequest $request, $id)
     {
         $encargado= Encargado::find($id);
         //actualizar el estado del recurso 

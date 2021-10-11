@@ -24,7 +24,7 @@ class GrupoRequest extends FormRequest
     public function rules()
     {
         return [
-            "codigo" => 'required|max:10',
+            "codigo" => 'required|max:15',
             "inicio" => 'required',
             "desactivacion" =>'required'
         ];
@@ -34,7 +34,9 @@ public function messages()
 {
     return [
         'codigo.required' => 'El codigo del Proyecto es Obligatorio',
-        'codigo.max' => 'Solo se aceptan maximo 10 caracteres'
+        'codigo.max' => 'Solo se aceptan maximo 10 caracteres',
+        'inicio.required' => 'La fecha de inicio es obligatoria',
+        'desactivacion.required' => 'La fecha de desactivacion es obligatoria'
     ];
 }
 
