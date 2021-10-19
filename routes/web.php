@@ -41,3 +41,5 @@ Route::get('plantilla', function () {
     return view('Templates.administrador');
 
 });
+
+Route::get('reporte', 'AsistenciaController@reporte');

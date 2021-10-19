@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Asistencia;
+use App\Exports\AsistenciasExport;
+use App\Usuario;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class AsistenciaController extends Controller
 {
@@ -14,7 +17,12 @@ class AsistenciaController extends Controller
      */
     public function index()
     {
+
         $asistencias = Asistencia::paginate(10);
+        $asistencias-> each(function($asistencias){
+            $asistencias->usuarios;
+
+        });
 
         return view('ModuloAsistencia.Listado')->with('asistencias', $asistencias);
     }
@@ -26,7 +34,8 @@ class AsistenciaController extends Controller
      */
     public function create()
     {
-        return view('ModuloAsistencia.Crear');
+        $empleados= Usuario::all();
+        return view('ModuloAsistencia.Crear')->with('empleados', $empleados);
     }
 
     /**
@@ -38,12 +47,13 @@ class AsistenciaController extends Controller
     public function store(Request $request)
     {
         /* Iniciamos proceso para crear una nueva asistencia */
-
         $asistencianew = new Asistencia();
 
-        $asistencianew -> FechaHoraIngreso= $request -> input('ingreso');
-        $asistencianew -> FechaHoraSalida= $request -> input('salida');
-        $asistencianew -> IdUsuarioFK= $request -> input('empleado');
+        $asistencianew -> FechaIngreso= $request -> input('fechaingreso');
+        $asistencianew -> HoraIngreso= $request -> input('horaingreso');
+        $asistencianew -> FechaSalida= $request -> input('fechasalida');
+        $asistencianew -> HoraSalida= $request -> input('horasalida');
+        $asistencianew -> IdUsuarioFK = $request -> input('empleado');
         $asistencianew ->save();
 
     }
@@ -101,8 +111,16 @@ class AsistenciaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function destroy($id)
     {
         //
     }
+
+     public function reporte(){
+        return Excel::download(new AsistenciasExport, 'Asistencia.xlsx');
+     }
+
+
+
 }

@@ -7,18 +7,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Bienvenido</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('favicon.ico')}}">
-    <link rel="stylesheet" href="{{asset('vendor/chartist/css/chartist.min.css')}}">
-    <link href="{{asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}" rel="stylesheet">
-    <link href="{{asset('vendor/owl-carousel/owl.carousel.css')}}" rel="stylesheet">
-    <link href="{{asset('css/style.css')}}" rel="stylesheet">
-
-    <!-- Datatables -->
-    <link href="{{asset('vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
-
+    <link rel="icon" type="image/png" sizes="16x16" href="http://127.0.0.1:8000/favicon.ico">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/vendor/chartist/css/chartist.min.css">
+    <link href="http://127.0.0.1:8000/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="http://127.0.0.1:8000/vendor/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="http://127.0.0.1:8000/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-
-
 </head>
 
 <body>
@@ -47,9 +41,9 @@
         ***********************************-->
         <div class="nav-header">
             <a href="index.html" class="brand-logo">
-                <img class="logo-abbr" src="{{asset('images/Logo/LogoSolo.png')}}" alt="">
-                <img class="logo-compact" src="{{asset('images/Logo/Nombre.png')}}" alt="">
-                <img class="brand-title" src="{{asset('images/Logo/Nombre.png')}}" alt="">
+                <img class="logo-abbr" src="http://127.0.0.1:8000/images/Logo/LogoSolo.png" alt="">
+                <img class="logo-compact" src="http://127.0.0.1:8000/images/Logo/Nombre.png" alt="">
+                <img class="brand-title" src="http://127.0.0.1:8000/images/Logo/Nombre.png" alt="">
             </a>
 
             <div class="nav-control">
@@ -777,32 +771,31 @@
             <div class="deznav-scroll">
                 <ul class="metismenu" id="menu">
                     <li>
-                        <a href="{{url('proyecto
-                        ')}}" class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <a href="http://127.0.0.1:8000/proyecto" class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-381-folder-8"></i>
                             <span class="nav-text">Proyectos</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{url('asistencia')}}" class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <a href="http://127.0.0.1:8000/asistencia" class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-381-television"></i>
                             <span class="nav-text">Asistencia</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{url('Grupo')}}" class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <a href="http://127.0.0.1:8000/Grupo" class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-381-controls-3"></i>
                             <span class="nav-text">Grupos de Trabajo</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{url('actividades')}}" class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <a href="http://127.0.0.1:8000/actividades" class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-381-internet"></i>
                             <span class="nav-text">Actividades</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{url('catalogo')}}" class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <a href="http://127.0.0.1:8000/catalogo" class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-381-heart"></i>
                             <span class="nav-text">Catálogo</span>
                         </a>
@@ -829,7 +822,99 @@
             Content body start
         ***********************************-->
         <div class="content-body">
-            @yield('administrador_contenido')
+            <h1>Asistencia de empleados</h1>
+
+<div class="col-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Profile Datatable</h4>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+<table id="example3" class="display min-w850">
+    <thead>
+        <tr>
+            <th>Empleado</th>
+            <th>Horario de Ingreso</th>
+            <th>Horario de Salida</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        
+
+
+        <tr>
+            <th>katherin López </th>
+            <th>2021-04-10 10:30:14</th>
+            <th>2021-04-10 18:00:04</th>
+            <th><a href="http://127.0.0.1:8000/asistencia/1"><i class="fa fa-pencil"></a></th>
+            <th><a href="http://127.0.0.1:8000/asistencia/1/edit">Editar</a></th>
+        </tr>
+        
+
+
+        <tr>
+            <th>Juan Petro</th>
+            <th>2021-04-11 08:00:35</th>
+            <th>2021-04-11 15:20:56</th>
+            <th><a href="http://127.0.0.1:8000/asistencia/2"><i class="fa fa-pencil"></a></th>
+            <th><a href="http://127.0.0.1:8000/asistencia/2/edit">Editar</a></th>
+        </tr>
+        
+
+
+        <tr>
+            <th>Daniela Nuñez</th>
+            <th>2021-04-12 08:20:20</th>
+            <th>2021-04-12 16:40:25</th>
+            <th><a href="http://127.0.0.1:8000/asistencia/3"><i class="fa fa-pencil"></a></th>
+            <th><a href="http://127.0.0.1:8000/asistencia/3/edit">Editar</a></th>
+        </tr>
+        
+
+
+        <tr>
+            <th>Andres Aldana</th>
+            <th>2021-04-13 07:25:56</th>
+            <th>2021-04-13 14:05:56</th>
+            <th><a href="http://127.0.0.1:8000/asistencia/4"><i class="fa fa-pencil"></a></th>
+            <th><a href="http://127.0.0.1:8000/asistencia/4/edit">Editar</a></th>
+        </tr>
+        
+
+
+        <tr>
+            <th>Claudia flor Pacheco</th>
+            <th>2021-04-14 09:44:10</th>
+            <th>2021-04-14 17:48:40</th>
+            <th><a href="http://127.0.0.1:8000/asistencia/5"><i class="fa fa-pencil"></a></th>
+            <th><a href="http://127.0.0.1:8000/asistencia/5/edit">Editar</a></th>
+        </tr>
+        
+
+
+        <tr>
+            <th>katherin López </th>
+            <th>2021-10-12 01:01:00</th>
+            <th>2021-10-12 13:01:00</th>
+            <th><a href="http://127.0.0.1:8000/asistencia/6"><i class="fa fa-pencil"></a></th>
+            <th><a href="http://127.0.0.1:8000/asistencia/6/edit">Editar</a></th>
+        </tr>
+        
+
+
+        <tr>
+            <th>katherin López </th>
+            <th>2021-10-12 01:01:00</th>
+            <th>2021-10-12 13:01:00</th>
+            <th><a href="http://127.0.0.1:8000/asistencia/7"><i class="fa fa-pencil"></a></th>
+            <th><a href="http://127.0.0.1:8000/asistencia/7/edit">Editar</a></th>
+        </tr>
+            </tbody>
+    <a href="http://127.0.0.1:8000/asistencia/create">Crear asistencia</a>
+
         </div>
         <!--**********************************
             Content body end
@@ -863,26 +948,21 @@
         Scripts
     ***********************************-->
     <!-- Required vendors -->
-    <script src="{{asset('./vendor/global/global.min.js')}}"></script>
-    <script src="{{asset('./vendor/bootstrap-select/dist/js/bootstrap-select.min.js')}}"></script>
-    <script src="{{asset('./vendor/chart.js/Chart.bundle.min.js')}}"></script>
-    <script src="{{asset('./js/custom.min.js')}}"></script>
-    <script src="{{asset('./js/deznav-init.js')}}"></script>
-    <script src="{{asset('./vendor/owl-carousel/owl.carousel.js')}}"></script>
-
-    <!-- Datatable -->
-    <script src="{{asset('vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('js/plugins-init/datatables.init.js')}}"></script>
+    <script src="http://127.0.0.1:8000/./vendor/global/global.min.js"></script>
+    <script src="http://127.0.0.1:8000/./vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="http://127.0.0.1:8000/./vendor/chart.js/Chart.bundle.min.js"></script>
+    <script src="http://127.0.0.1:8000/./js/custom.min.js"></script>
+    <script src="http://127.0.0.1:8000/./js/deznav-init.js"></script>
+    <script src="http://127.0.0.1:8000/./vendor/owl-carousel/owl.carousel.js"></script>
 
     <!-- Chart piety plugin files -->
-    <script src="{{asset('./vendor/peity/jquery.peity.min.js')}}"></script>
+    <script src="http://127.0.0.1:8000/./vendor/peity/jquery.peity.min.js"></script>
 
     <!-- Apex Chart -->
-    <script src="{{asset('./vendor/apexchart/apexchart.js')}}"></script>
+    <script src="http://127.0.0.1:8000/./vendor/apexchart/apexchart.js"></script>
 
     <!-- Dashboard 1 -->
-    <script src="{{asset('./js/dashboard/dashboard-1.js')}}"></script>
-
+    <script src="http://127.0.0.1:8000/./js/dashboard/dashboard-1.js"></script>
     <script>
         function carouselReview() {
             /*  testimonial one function by = owl.carousel.js */

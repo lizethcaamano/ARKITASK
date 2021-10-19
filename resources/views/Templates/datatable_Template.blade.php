@@ -5,20 +5,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Bienvenido</title>
+    <title>Gymove - Fitness Bootstrap Admin Dashboard</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('favicon.ico')}}">
-    <link rel="stylesheet" href="{{asset('vendor/chartist/css/chartist.min.css')}}">
-    <link href="{{asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}" rel="stylesheet">
-    <link href="{{asset('vendor/owl-carousel/owl.carousel.css')}}" rel="stylesheet">
-    <link href="{{asset('css/style.css')}}" rel="stylesheet">
-
-    <!-- Datatables -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+    <!-- Datatable -->
     <link href="{{asset('vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
-
+    <!-- Custom Stylesheet -->
+    <link href="./vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-
-
 </head>
 
 <body>
@@ -37,6 +32,7 @@
         Preloader end
     ********************-->
 
+
     <!--**********************************
         Main wrapper start
     ***********************************-->
@@ -47,9 +43,9 @@
         ***********************************-->
         <div class="nav-header">
             <a href="index.html" class="brand-logo">
-                <img class="logo-abbr" src="{{asset('images/Logo/LogoSolo.png')}}" alt="">
-                <img class="logo-compact" src="{{asset('images/Logo/Nombre.png')}}" alt="">
-                <img class="brand-title" src="{{asset('images/Logo/Nombre.png')}}" alt="">
+                <img class="logo-abbr" src="./images/logo.png" alt="">
+                <img class="logo-compact" src="./images/logo-text.png" alt="">
+                <img class="brand-title" src="./images/logo-text.png" alt="">
             </a>
 
             <div class="nav-control">
@@ -83,12 +79,12 @@
                     <div class="tab-pane fade active show" id="chat" role="tabpanel">
                         <div class="card mb-sm-3 mb-md-0 contacts_card dz-chat-user-box">
                             <div class="card-header chat-list-header text-center">
-                                <a href="javascript:void(0)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect fill="#000000" x="4" y="11" width="16" height="2" rx="1"/><rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) " x="4" y="11" width="16" height="2" rx="1"/></g></svg></a>
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect fill="#000000" x="4" y="11" width="16" height="2" rx="1"/><rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) " x="4" y="11" width="16" height="2" rx="1"/></g></svg></a>
                                 <div>
                                     <h6 class="mb-1">Chat List</h6>
                                     <p class="mb-0">Show All</p>
                                 </div>
-                                <a href="javascript:void(0)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><circle fill="#000000" cx="5" cy="12" r="2"/><circle fill="#000000" cx="12" cy="12" r="2"/><circle fill="#000000" cx="19" cy="12" r="2"/></g></svg></a>
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><circle fill="#000000" cx="5" cy="12" r="2"/><circle fill="#000000" cx="12" cy="12" r="2"/><circle fill="#000000" cx="19" cy="12" r="2"/></g></svg></a>
                             </div>
                             <div class="card-body contacts_body p-0 dz-scroll  " id="DZ_W_Contacts_Body">
                                 <ul class="contacts">
@@ -282,7 +278,7 @@
                         </div>
                         <div class="card chat dz-chat-history-box d-none">
                             <div class="card-header chat-list-header text-center">
-                                <a href="javascript:void(0)" class="dz-chat-history-back">
+                                <a href="#" class="dz-chat-history-back">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon points="0 0 24 0 24 24 0 24"/><rect fill="#000000" opacity="0.3" transform="translate(15.000000, 12.000000) scale(-1, 1) rotate(-90.000000) translate(-15.000000, -12.000000) " x="14" y="7" width="2" height="10" rx="1"/><path d="M3.7071045,15.7071045 C3.3165802,16.0976288 2.68341522,16.0976288 2.29289093,15.7071045 C1.90236664,15.3165802 1.90236664,14.6834152 2.29289093,14.2928909 L8.29289093,8.29289093 C8.67146987,7.914312 9.28105631,7.90106637 9.67572234,8.26284357 L15.6757223,13.7628436 C16.0828413,14.136036 16.1103443,14.7686034 15.7371519,15.1757223 C15.3639594,15.5828413 14.7313921,15.6103443 14.3242731,15.2371519 L9.03007346,10.3841355 L3.7071045,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(9.000001, 11.999997) scale(-1, -1) rotate(90.000000) translate(-9.000001, -11.999997) "/></g></svg>
                                 </a>
                                 <div>
@@ -290,7 +286,7 @@
                                     <p class="mb-0 text-success">Online</p>
                                 </div>
                                 <div class="dropdown">
-                                    <a href="javascript:void(0)" data-toggle="dropdown"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><circle fill="#000000" cx="5" cy="12" r="2"/><circle fill="#000000" cx="12" cy="12" r="2"/><circle fill="#000000" cx="19" cy="12" r="2"/></g></svg></a>
+                                    <a href="#" data-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><circle fill="#000000" cx="5" cy="12" r="2"/><circle fill="#000000" cx="12" cy="12" r="2"/><circle fill="#000000" cx="19" cy="12" r="2"/></g></svg></a>
                                     <ul class="dropdown-menu dropdown-menu-right">
                                         <li class="dropdown-item"><i class="fa fa-user-circle text-primary mr-2"></i> View profile</li>
                                         <li class="dropdown-item"><i class="fa fa-users text-primary mr-2"></i> Add to close friends</li>
@@ -440,12 +436,12 @@
                     <div class="tab-pane fade" id="alerts" role="tabpanel">
                         <div class="card mb-sm-3 mb-md-0 contacts_card">
                             <div class="card-header chat-list-header text-center">
-                                <a href="javascript:void(0)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><circle fill="#000000" cx="5" cy="12" r="2"/><circle fill="#000000" cx="12" cy="12" r="2"/><circle fill="#000000" cx="19" cy="12" r="2"/></g></svg></a>
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><circle fill="#000000" cx="5" cy="12" r="2"/><circle fill="#000000" cx="12" cy="12" r="2"/><circle fill="#000000" cx="19" cy="12" r="2"/></g></svg></a>
                                 <div>
                                     <h6 class="mb-1">Notications</h6>
                                     <p class="mb-0">Show All</p>
                                 </div>
-                                <a href="javascript:void(0)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/><path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fill-rule="nonzero"/></g></svg></a>
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/><path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fill-rule="nonzero"/></g></svg></a>
                             </div>
                             <div class="card-body contacts_body p-0 dz-scroll" id="DZ_W_Contacts_Body1">
                                 <ul class="contacts">
@@ -496,12 +492,12 @@
                     <div class="tab-pane fade" id="notes">
                         <div class="card mb-sm-3 mb-md-0 note_card">
                             <div class="card-header chat-list-header text-center">
-                                <a href="javascript:void(0)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect fill="#000000" x="4" y="11" width="16" height="2" rx="1"/><rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) " x="4" y="11" width="16" height="2" rx="1"/></g></svg></a>
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect fill="#000000" x="4" y="11" width="16" height="2" rx="1"/><rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) " x="4" y="11" width="16" height="2" rx="1"/></g></svg></a>
                                 <div>
                                     <h6 class="mb-1">Notes</h6>
                                     <p class="mb-0">Add New Nots</p>
                                 </div>
-                                <a href="javascript:void(0)"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/><path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fill-rule="nonzero"/></g></svg></a>
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/><path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fill-rule="nonzero"/></g></svg></a>
                             </div>
                             <div class="card-body contacts_body p-0 dz-scroll" id="DZ_W_Contacts_Body2">
                                 <ul class="contacts">
@@ -512,8 +508,8 @@
                                                 <p>10 Aug 2020</p>
                                             </div>
                                             <div class="ml-auto">
-                                                <a href="javascript:void(0)" class="btn btn-primary btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
-                                                <a href="javascript:void(0)" class="btn btn-danger btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                                <a href="#" class="btn btn-primary btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+                                                <a href="#" class="btn btn-danger btn-xs sharp"><i class="fa fa-trash"></i></a>
                                             </div>
                                         </div>
                                     </li>
@@ -524,8 +520,8 @@
                                                 <p>10 Aug 2020</p>
                                             </div>
                                             <div class="ml-auto">
-                                                <a href="javascript:void(0)" class="btn btn-primary btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
-                                                <a href="javascript:void(0)" class="btn btn-danger btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                                <a href="#" class="btn btn-primary btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+                                                <a href="#" class="btn btn-danger btn-xs sharp"><i class="fa fa-trash"></i></a>
                                             </div>
                                         </div>
                                     </li>
@@ -536,8 +532,8 @@
                                                 <p>10 Aug 2020</p>
                                             </div>
                                             <div class="ml-auto">
-                                                <a href="javascript:void(0)" class="btn btn-primary btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
-                                                <a href="javascript:void(0)" class="btn btn-danger btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                                <a href="#" class="btn btn-primary btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+                                                <a href="#" class="btn btn-danger btn-xs sharp"><i class="fa fa-trash"></i></a>
                                             </div>
                                         </div>
                                     </li>
@@ -548,8 +544,8 @@
                                                 <p>10 Aug 2020</p>
                                             </div>
                                             <div class="ml-auto">
-                                                <a href="javascript:void(0)" class="btn btn-primary btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
-                                                <a href="javascript:void(0)" class="btn btn-danger btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                                <a href="#" class="btn btn-primary btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+                                                <a href="#" class="btn btn-danger btn-xs sharp"><i class="fa fa-trash"></i></a>
                                             </div>
                                         </div>
                                     </li>
@@ -564,6 +560,9 @@
             Chat box End
         ***********************************-->
 
+
+
+
         <!--**********************************
             Header start
         ***********************************-->
@@ -573,7 +572,7 @@
                     <div class="collapse navbar-collapse justify-content-between">
                         <div class="header-left">
                             <div class="dashboard_bar">
-                                Dashboard
+                                Datatable
                             </div>
                         </div>
                         <ul class="navbar-nav header-right">
@@ -777,48 +776,161 @@
             <div class="deznav-scroll">
                 <ul class="metismenu" id="menu">
                     <li>
-                        <a href="{{url('proyecto
-                        ')}}" class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                            <i class="flaticon-381-folder-8"></i>
-                            <span class="nav-text">Proyectos</span>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-381-networking"></i>
+                            <span class="nav-text">Dashboard</span>
                         </a>
+                        <ul aria-expanded="false">
+                            <li><a href="index.html">Dashboard</a></li>
+                            <li><a href="workout-statistic.html">Workout Statistic</a></li>
+                            <li><a href="workoutplan.html">Workout Plan</a></li>
+                            <li><a href="distance-map.html">Distance Map</a></li>
+                            <li><a href="food-menu.html">Diet Food Menu</a></li>
+                            <li><a href="personal-record.html">Personal Record</a></li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="{{url('asistencia')}}" class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-381-television"></i>
-                            <span class="nav-text">Asistencia</span>
+                            <span class="nav-text">Apps</span>
                         </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./app-profile.html">Profile</a></li>
+                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
+                                <ul aria-expanded="false">
+                                    <li><a href="./email-compose.html">Compose</a></li>
+                                    <li><a href="./email-inbox.html">Inbox</a></li>
+                                    <li><a href="./email-read.html">Read</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./app-calender.html">Calendar</a></li>
+                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Shop</a>
+                                <ul aria-expanded="false">
+                                    <li><a href="./ecom-product-grid.html">Product Grid</a></li>
+                                    <li><a href="./ecom-product-list.html">Product List</a></li>
+                                    <li><a href="./ecom-product-detail.html">Product Details</a></li>
+                                    <li><a href="./ecom-product-order.html">Order</a></li>
+                                    <li><a href="./ecom-checkout.html">Checkout</a></li>
+                                    <li><a href="./ecom-invoice.html">Invoice</a></li>
+                                    <li><a href="./ecom-customers.html">Customers</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="{{url('Grupo')}}" class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-381-controls-3"></i>
-                            <span class="nav-text">Grupos de Trabajo</span>
+                            <span class="nav-text">Charts</span>
                         </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./chart-flot.html">Flot</a></li>
+                            <li><a href="./chart-morris.html">Morris</a></li>
+                            <li><a href="./chart-chartjs.html">Chartjs</a></li>
+                            <li><a href="./chart-chartist.html">Chartist</a></li>
+                            <li><a href="./chart-sparkline.html">Sparkline</a></li>
+                            <li><a href="./chart-peity.html">Peity</a></li>
+                        </ul>
                     </li>
                     <li>
-                        <a href="{{url('actividades')}}" class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-381-internet"></i>
-                            <span class="nav-text">Actividades</span>
+                            <span class="nav-text">Bootstrap</span>
                         </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./ui-accordion.html">Accordion</a></li>
+                            <li><a href="./ui-alert.html">Alert</a></li>
+                            <li><a href="./ui-badge.html">Badge</a></li>
+                            <li><a href="./ui-button.html">Button</a></li>
+                            <li><a href="./ui-modal.html">Modal</a></li>
+                            <li><a href="./ui-button-group.html">Button Group</a></li>
+                            <li><a href="./ui-list-group.html">List Group</a></li>
+                            <li><a href="./ui-media-object.html">Media Object</a></li>
+                            <li><a href="./ui-card.html">Cards</a></li>
+                            <li><a href="./ui-carousel.html">Carousel</a></li>
+                            <li><a href="./ui-dropdown.html">Dropdown</a></li>
+                            <li><a href="./ui-popover.html">Popover</a></li>
+                            <li><a href="./ui-progressbar.html">Progressbar</a></li>
+                            <li><a href="./ui-tab.html">Tab</a></li>
+                            <li><a href="./ui-typography.html">Typography</a></li>
+                            <li><a href="./ui-pagination.html">Pagination</a></li>
+                            <li><a href="./ui-grid.html">Grid</a></li>
+
+                        </ul>
                     </li>
                     <li>
-                        <a href="{{url('catalogo')}}" class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                             <i class="flaticon-381-heart"></i>
-                            <span class="nav-text">Catálogo</span>
+                            <span class="nav-text">Plugins</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./uc-select2.html">Select 2</a></li>
+                            <li><a href="./uc-nestable.html">Nestedable</a></li>
+                            <li><a href="./uc-noui-slider.html">Noui Slider</a></li>
+                            <li><a href="./uc-sweetalert.html">Sweet Alert</a></li>
+                            <li><a href="./uc-toastr.html">Toastr</a></li>
+                            <li><a href="./map-jqvmap.html">Jqv Map</a></li>
+                            <li><a href="./uc-lightgallery.html">Lightgallery</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="widget-basic.html" class="ai-icon" aria-expanded="false">
+                            <i class="flaticon-381-settings-2"></i>
+                            <span class="nav-text">Widget</span>
                         </a>
                     </li>
                     <li>
                         <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-
-                            <i class="flaticon-381-heart"></i>
-                            <span class="nav-text">Entregables</span>
+                            <i class="flaticon-381-notepad"></i>
+                            <span class="nav-text">Forms</span>
                         </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./form-element.html">Form Elements</a></li>
+                            <li><a href="./form-wizard.html">Wizard</a></li>
+                            <li><a href="./form-editor-summernote.html">Summernote</a></li>
+                            <li><a href="form-pickers.html">Pickers</a></li>
+                            <li><a href="form-validation-jquery.html">Jquery Validate</a></li>
+                        </ul>
                     </li>
-
-
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-381-network"></i>
+                            <span class="nav-text">Table</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="table-bootstrap-basic.html">Bootstrap</a></li>
+                            <li><a href="table-datatable-basic.html">Datatable</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-381-layer-1"></i>
+                            <span class="nav-text">Pages</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./page-register.html">Register</a></li>
+                            <li><a href="./page-login.html">Login</a></li>
+                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
+                                <ul aria-expanded="false">
+                                    <li><a href="./page-error-400.html">Error 400</a></li>
+                                    <li><a href="./page-error-403.html">Error 403</a></li>
+                                    <li><a href="./page-error-404.html">Error 404</a></li>
+                                    <li><a href="./page-error-500.html">Error 500</a></li>
+                                    <li><a href="./page-error-503.html">Error 503</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./page-lock-screen.html">Lock Screen</a></li>
+                        </ul>
+                    </li>
                 </ul>
 
-
+                <div class="add-menu-sidebar">
+                    <img src="images/calendar.png" alt="" class="mr-3">
+                    <p class="	font-w500 mb-0">Create Workout Plan Now</p>
+                </div>
+                <div class="copyright">
+                    <p><strong>Gymove Fitness Admin Dashboard</strong> © 2020 All Rights Reserved</p>
+                    <p>Made with <span class="heart"></span> by DexignZone</p>
+                </div>
             </div>
         </div>
         <!--**********************************
@@ -828,18 +940,19 @@
         <!--**********************************
             Content body start
         ***********************************-->
-        <div class="content-body">
-            @yield('administrador_contenido')
-        </div>
+        @yield('datatables')
         <!--**********************************
             Content body end
         ***********************************-->
+
 
         <!--**********************************
             Footer start
         ***********************************-->
         <div class="footer">
-
+            <div class="copyright">
+                <p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">DexignZone</a> 2020</p>
+            </div>
         </div>
         <!--**********************************
             Footer end
@@ -863,66 +976,15 @@
         Scripts
     ***********************************-->
     <!-- Required vendors -->
-    <script src="{{asset('./vendor/global/global.min.js')}}"></script>
-    <script src="{{asset('./vendor/bootstrap-select/dist/js/bootstrap-select.min.js')}}"></script>
-    <script src="{{asset('./vendor/chart.js/Chart.bundle.min.js')}}"></script>
-    <script src="{{asset('./js/custom.min.js')}}"></script>
-    <script src="{{asset('./js/deznav-init.js')}}"></script>
-    <script src="{{asset('./vendor/owl-carousel/owl.carousel.js')}}"></script>
+    <script src="./vendor/global/global.min.js"></script>
+    <script src="./vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="./js/custom.min.js"></script>
+    <script src="./js/deznav-init.js"></script>
 
     <!-- Datatable -->
     <script src="{{asset('vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('js/plugins-init/datatables.init.js')}}"></script>
+    <script src="{{asset('js/plugins-init/datatables.init.js"></script>
 
-    <!-- Chart piety plugin files -->
-    <script src="{{asset('./vendor/peity/jquery.peity.min.js')}}"></script>
-
-    <!-- Apex Chart -->
-    <script src="{{asset('./vendor/apexchart/apexchart.js')}}"></script>
-
-    <!-- Dashboard 1 -->
-    <script src="{{asset('./js/dashboard/dashboard-1.js')}}"></script>
-
-    <script>
-        function carouselReview() {
-            /*  testimonial one function by = owl.carousel.js */
-            jQuery('.testimonial-one').owlCarousel({
-                loop: true,
-                autoplay: true,
-                margin: 30,
-                nav: false,
-                dots: false,
-                left: true,
-                navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>', '<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    484: {
-                        items: 2
-                    },
-                    882: {
-                        items: 3
-                    },
-                    1200: {
-                        items: 2
-                    },
-
-                    1540: {
-                        items: 3
-                    },
-                    1740: {
-                        items: 4
-                    }
-                }
-            })
-        }
-        jQuery(window).on('load', function() {
-            setTimeout(function() {
-                carouselReview();
-            }, 1000);
-        });
-    </script>
 </body>
 
 </html>

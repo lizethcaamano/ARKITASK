@@ -14,4 +14,5 @@ class TipoProyecto extends Model
 
         return $this -> hasmany('App\Proyecto','IdTipoProyectoFk');
     }
+
 }

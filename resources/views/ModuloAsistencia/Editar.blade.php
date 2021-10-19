@@ -12,6 +12,9 @@
         <!-- Text input-->
         <div class="form-group" >
           <label class="col-md-4 control-label" >Nombre</label>
+          <select name="empleado" class="form-control input-md">
+
+          </select>
           <input value="{{$asistencia->IdUsarioFK}}" name="empleado" type="text" placeholder="" class="form-control input-md">
           <div class="col-md-4">
           </div>

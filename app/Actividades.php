@@ -14,8 +14,8 @@ class Actividades extends Model
 
     public function ArchivoSolucion(){
 
-        return $this -> HasMany('App\Entregables','IdActividadesFK')
+        return $this -> HasMany('App\Entregables','IdActividadesFK');
     }
 
-    
+
 }
