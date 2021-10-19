@@ -807,6 +807,12 @@
                             <span class="nav-text">Entregables</span>
                         </a>
                     </li>
+                    <li>
+                    <a href="{{url('proyectoT')}}" class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-381-folder-8"></i>
+                            <span class="nav-text">Proyectos Terminados</span>
+                        </a>
+</li>
 
 
                 </ul>

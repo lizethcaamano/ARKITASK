@@ -10,11 +10,22 @@
 <h1 class="text-danger">Nuevo Usuario</h1>
 <form method="post" action="{{url('Usuario')}}">
     @csrf
+
+    <input type="hidden" name="contraseña" class="form-control">
 <div class="mb-4 mt-6">
     <label for="nombre" class="form-label">Nombre de usuario:</label>
     <input type="text" name="nombre" class="form-control" value="{{old('nombre')}}">
     <span class="text-danger">{{$errors->first("nombre")}}</span>
 </div>
+
+
+
+  
+
+  
+
+
+
 
 <div class="mb-4 mt-6">
     <label for="apellido" class="form-label">Apellido de usuario:</label>

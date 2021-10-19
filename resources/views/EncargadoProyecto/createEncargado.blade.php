@@ -20,6 +20,8 @@
     <input type="text" name="observaciones" class="form-control">
     <span class="text-danger">{{$errors->first("observaciones")}}</span>
 </div>
+
+
 <div class="d-grid gap-2 col-6 mx-aito">
     <button type="submit"  class="btn btn-primary">Guardar</button>
 </div>

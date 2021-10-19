@@ -54,6 +54,8 @@
     <!-- <span class="text-danger">{{$errors->first("imagen")}}</span> -->
 </div>
 
+
+
 <!-- Button -->
 <div class="form-group">
       <label class="col-md-4 control-label" for="button"><br></label>
@@ -61,6 +63,8 @@
     <button type="submit"  class="btn btn-primary">Guardar</button>
 </div>
     </div>
+
+  
 
     </fieldset>
 
