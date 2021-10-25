@@ -26,8 +26,8 @@
             <td>{{ $encargado->FechaInicio}}</td>
             <td>{{ $encargado->FechaFinal}}</td>
             <td>{{ $encargado->Observaciones}}</td>
-            <td><a class="btn btn-outline-secondary" href="{{ url('EncargadoProyecto/'.$encargadoProyecto->IdEncargado)}}">Ver Detalles </a></td>
-           <td> <a class="btn btn-outline-info" href="{{ url('EncargadoProyecto/'.$encargadoProyecto->IdEncargado.'/edit')}}"> Actualizar </a></td>
+            <td><a href="{{ url('Encargado/'.$encargado->IdEncargado)}}">Ver detalles</a></td>
+           <td> <a class="btn btn-outline-info" href="{{ url('Encargado/'.$encargado->IdEncargado.'/edit')}}"> Actualizar </a></td>
 
 
 
@@ -38,6 +38,6 @@
 
  {{ $encargados->links() }}
 
-<a  Class = "btn btn-info " href="{{ url('EncargadoProyecto/create') }}">Nuevo Encargado</a>
+<a  Class = "btn btn-info " href="{{ url('Encargado/create') }}">Nuevo Encargado</a>
 
 @endsection

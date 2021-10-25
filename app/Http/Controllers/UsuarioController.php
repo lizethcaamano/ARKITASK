@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Usuario;
 use Illuminate\Http\Request;
+use App\Http\Requests\UsuariosRequest;
 
 class UsuarioController extends Controller
 {
@@ -34,7 +35,7 @@ class UsuarioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UsuariosRequest $request)
     {
         $nuevousuario = new Usuario();
         $nuevousuario->Nombre = $request->input("nombre");
@@ -84,7 +85,7 @@ class UsuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UsuariosRequest $request, $id)
     {
         $usuario= Usuario::find($id);
         //actualizar el estado del recurso 
@@ -98,7 +99,7 @@ class UsuarioController extends Controller
         $usuario->Telefono = $request->input("telefono");
         $usuario->Imagen = $request->input("imagen");
         
-        $usuario->save();
+        $eusuario->save();
         return redirect("Usuario")
         ->with("mensaje", "Usuario actualizado");
     }

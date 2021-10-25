@@ -10,10 +10,10 @@
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Codigo de grupo</label>
+  <label class="col-md-4 control-label" for="textinput" >Codigo de grupo</label>
   <div class="col-md-4">
-  <input value="{{old('CodigoGrupo')}}" name="codigo"  type="text" placeholder="" class="form-control input-md">
-    <strong class="text-danger">{{$errors->first('codigo')}}</strong>  -->
+  <input value="{{old('codigo')}}" name="codigo"  type="text" placeholder="" class="form-control input-md"  maxlength="15">
+    <strong class="text-danger">{{$errors->first('codigo')}}</strong> 
   </div>
 </div>
 
@@ -21,22 +21,22 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">Fecha de inicio</label>
   <div class="col-md-4">
-  <input value="{{old('FechaInicio')}}" name="inicio"  type="date" placeholder="" class="form-control input-md">
-  <strong>{{$errors->first('inicio')}}</strong>  -->
+  <input value="{{old('inicio')}}" name="inicio"  type="date" placeholder="" class="form-control input-md" min="<?php echo date("Y-m-d");?>">
+  <strong>{{$errors->first('inicio')}}</strong> 
   </div>
 </div>
 
 
 
-<!-- Text input-->
+
 
 
 
 <div class="form-group">
   <label class="col-md-4 control-label" >Fecha desactivacion</label>
   <div class="col-md-4">
-  <input value="{{old('FechaDesactivacion')}}" name="desactivacion"  type="date" placeholder="" class="form-control input-md">
-   <strong>{{$errors->first('desactivacion')}}</strong> -->
+  <input value="{{old('desactivacion')}}" name="desactivacion"  type="date" placeholder="" class="form-control input-md">
+   <strong>{{$errors->first('desactivacion')}}</strong> 
   </div>
 </div>
 

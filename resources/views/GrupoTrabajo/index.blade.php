@@ -33,5 +33,5 @@
             @endforeach
         </tbody>
     </table>
-    <a href="{{url('Grupo/create')}}" class="btn btn-primary">Nuevo Proyecto</a>
+    <a href="{{url('Grupo/create')}}" class="btn btn-primary">Nuevo Grupo </a>
 @endsection

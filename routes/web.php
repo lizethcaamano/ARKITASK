@@ -36,6 +36,12 @@ Route::resource('Grupo','GruposTrabajoController');
 Route::resource('actividades', 'ActividadesController');
 
 Route::resource('entregables', 'EntregablesController');
+Route::resource('proyectoT', 'ProyectosTerminadosController');
+
+Route::get('login','Auth\LoginController@form');
+Route::post('login','Auth\LoginController@login');
+Route::get('logout','Auth\LoginController@logout');
+
 
 Route::get('plantilla', function () {
     return view('Templates.administrador');

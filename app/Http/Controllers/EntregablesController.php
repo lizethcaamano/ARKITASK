@@ -40,6 +40,7 @@ class EntregablesController extends Controller
 
         $nuevoentregable = new Entregables();
         $nuevoentregable -> URLarchivo = $request -> input("urlarchivo");
+        $nuevoentregable -> FechaEntrega = $request -> input("fechaentrega");
         $nuevoentregable ->save();
 
     return redirect('entregables')
@@ -86,6 +87,7 @@ class EntregablesController extends Controller
         $entregable = Entregables::find($id);
 
         $entregable->URLarchivo = $request->input('urlarchivo');
+        $entregable->FechaEntrega = $request->input('fechaentrega');
         $entregable->Estado = $request->input('estado');
         $entregable->save();
 

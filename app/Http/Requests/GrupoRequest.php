@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Http\Kernel;
 
 class GrupoRequest extends FormRequest
 {
@@ -24,9 +25,10 @@ class GrupoRequest extends FormRequest
     public function rules()
     {
         return [
-            "codigo" => 'required|max:10',
+            "codigo" => 'required|max:15|min:6',
             "inicio" => 'required',
-            "desactivacion" =>'required'
+            "desactivacion" =>'required|after_or_equal:inicio',
+            
         ];
     }
 
@@ -34,7 +36,11 @@ public function messages()
 {
     return [
         'codigo.required' => 'El codigo del Proyecto es Obligatorio',
-        'codigo.max' => 'Solo se aceptan maximo 10 caracteres'
+        'codigo.min' => 'Solo se aceptan minimo 6 caracteres',
+        'inicio.required' => 'Este campo es requerido',
+        'desactivacion.required' => 'Este campo es requerido',
+        'desactivacion.after_or_equal' =>'La fecha de desactivación no puede ser anterior a la fecha de inicio'
+
     ];
 }
 

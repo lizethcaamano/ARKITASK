@@ -5,7 +5,7 @@
     @csrf
     <div class="mb-4 mt-6">
     <label for="fechaInicio" class="form-label">Fecha de Inicio:</label>
-    <input type="date" name="fechaInicio" class="form-control">
+    <input type="date" name="fechaInicio" class="form-control" min="<?php echo date("Y-m-d");?>" >
     <span class="text-danger">{{$errors->first("fechaInicio")}}</span>
 </div>
 
@@ -16,8 +16,8 @@
 </div>
 
 <div class="mb-4 mt-6">
-    <label for="observaciones" class="form-label">Observaciones:</label>
-    <input type="text" name="observaciones" class="form-control">
+    <label for="observaciones" class="form-label">Observaciones:</label><br>
+<textarea name="observaciones" id="" cols="18" rows="5" class="form-control"   ></textarea>
     <span class="text-danger">{{$errors->first("observaciones")}}</span>
 </div>
 <div class="d-grid gap-2 col-6 mx-aito">

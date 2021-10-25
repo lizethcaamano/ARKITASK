@@ -26,9 +26,9 @@ class ProyectoRequest extends FormRequest
     {
         return [
          
-                "codigo"=> 'required|max:10',
-                "nombre"=> 'required|alpha|max:10',
-                "fechae"=> 'required',
+                "codigo"=> 'required|exists:proyecto,CodigoProyecto|max:20',
+                "nombre"=> 'required|exists:proyecto,NombreProyecto|regex:/^[a-zA-Z\s]+$/u|max:25',
+                "fechae"=> 'required|after_or_equal:fechar',
                 "fechar"=> 'required'
     
             
@@ -39,8 +39,11 @@ public function messages()
 {  
 
 return [ 'codigo.required' => 'El codigo del proyecto  es Obligatorio',
+'codigo.exists' => 'El codigo ya existe',
 'nombre.required' => 'El nombre del proyecto es obligatorio',
 'fechae.required' => 'La fecha de entrega es obligatoria',
-'fechar.required' => 'La fecha de Realizacion es obligatoria' ];
+'fechae.after_or_equal' =>'La fecha de entrega no puede ser anterior a la fecha de realización',
+'fechar.required' => 'La fecha de Realizacion es obligatoria',
+'nombre.regex' => 'Solo se permiten letras' ];
 }
 }

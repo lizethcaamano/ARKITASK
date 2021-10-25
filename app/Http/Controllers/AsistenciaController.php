@@ -7,6 +7,7 @@ use App\Exports\AsistenciasExport;
 use App\Usuario;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
+use App\http\Requests\AsistenciaRequest;
 
 class AsistenciaController extends Controller
 {
@@ -44,7 +45,7 @@ class AsistenciaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AsistenciaRequest $request)
     {
         /* Iniciamos proceso para crear una nueva asistencia */
         $asistencianew = new Asistencia();
@@ -91,14 +92,16 @@ class AsistenciaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(AsistenciaRequest $request, $id)
     {
         $asistencia = Asistencia::find($id);
 
 
 
-        $asistencia -> FechaHoraIngreso= $request -> input('ingreso');
-        $asistencia -> FechaHoraSalida= $request -> input('salida');
+        $asistencia -> FechaIngreso= $request -> input('fechaingreso');
+        $asistencia -> FechaSalida= $request -> input('fechasalida');
+        $asistencia -> FechaHoraIngreso= $request -> input('horaingreso');
+        $asistencia -> FechaHoraSalida= $request -> input('horasalida');
         $asistencia -> IdUsuarioFK= $request -> input('empleado');
         $asistencia ->save();
 

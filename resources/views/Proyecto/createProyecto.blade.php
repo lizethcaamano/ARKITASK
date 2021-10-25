@@ -15,7 +15,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">Codigo de proyecto</label>
   <div class="col-md-4">
-  <input value="{{old('codigoproyecto')}}" name="codigo"  type="text" placeholder="" class="form-control input-md">
+  <input value="{{old('codigo')}}" name="codigo"  type="text" placeholder="" class="form-control input-md">
    <strong class="text-danger">{{$errors->first('codigo')}}</strong>
   </div>
 </div>
@@ -24,7 +24,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">Nombre Proyecto</label>
   <div class="col-md-4">
-  <input value="{{old('NombreProyecto')}}" name="nombre"  type="text" placeholder="" class="form-control input-md">
+  <input value="{{old('nombre')}}" name="nombre"  type="text" placeholder="" class="form-control input-md">
    <strong>{{$errors->first('nombre')}}</strong>
   </div>
 </div>
@@ -35,20 +35,16 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="Gmail">Fecha Realizacion</label>
   <div class="col-md-4">
-  <input value="{{old('FechaRealizacion')}}" name="fechar"  type="date" placeholder="" class="form-control input-md">
+  <input value="{{old('fechar')}}" name="fechar"  type="date" placeholder="" class="form-control input-md" min="<?php echo date("Y-m-d");?>">
    <strong>{{$errors->first('fechar')}}</strong>
   </div>
 </div>
 
 
 <div class="form-group">
-<<<<<<< HEAD
-  <label class="col-md-4 control-label" for="Gmail">Fecha Entrega</label>
-=======
-  <label class="col-md-4 control-label" for="Gmail">Fecha eNTREGA</label>  
->>>>>>> fbe5ae87513e3253ebf60be067110414d9be4948
+  <label class="col-md-4 control-label" for="Gmail">Fecha Entrega</label>  
   <div class="col-md-4">
-  <input value="{{old('FechaEntrega')}}" name="fechae"  type="date" placeholder="" class="form-control input-md">
+  <input value="{{old('fechae')}}" name="fechae"  type="date" placeholder="" class="form-control input-md">
    <strong>{{$errors->first('fechae')}}</strong>
   </div>
 </div>

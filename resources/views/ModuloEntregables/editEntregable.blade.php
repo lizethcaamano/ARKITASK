@@ -21,10 +21,10 @@ action="{{ url('entregables/' . $entregable->IdArchivo) }}"
 
       <!-- Text input-->
     <div class="form-group">
-        <label class="col-md-4 control-label" for="apellido">Estado:</label>
+        <label class="col-md-4 control-label" for="apellido">Fecha de Entrega</label>
         <div class="col-md-4">
-        <input value="{{ $entregable->Estado }}" name="estado" type="text" placeholder="" class="form-control input-md" >
-        <strong class="text-danger"> {{ $errors->first('estado')   }}  </strong>
+        <input value="{{ $entregable->FechaEntrega }}" name="fechaentrega" type="date" placeholder="" class="form-control input-md" >
+        <strong class="text-danger"> {{ $errors->first('fechaentrega')   }}  </strong>
         </div>
       </div>
 

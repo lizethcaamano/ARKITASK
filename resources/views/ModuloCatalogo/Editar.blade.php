@@ -14,6 +14,7 @@
           <label class="col-md-4 control-label" >Nombre de Particpantes</label>
           <input value="{{$catalogo->NombreParticipantes}}"  name="participantes" type="text" placeholder="" class="form-control input-md" >
           <div class="col-md-4">
+          <strong> {{ $errors->first('participantes') }} </strong>
           </div>
         </div>
 
@@ -22,6 +23,7 @@
           <label class="col-md-4 control-label" for="textInput1">Empresa Contrante</label>
           <input value="{{$catalogo->EmpresaContratante}}" name="empresa" type="text" placeholder="" class="form-control input-md" >
           <div class="col-md-4">
+          <strong> {{ $errors->first('empresa') }} </strong>
         </div>
 
 
@@ -31,6 +33,7 @@
           <div class="col-md-4">
           <input value="{{$catalogo->Area}}" name="area" type="text" placeholder="" class="form-control input-md" >
           </div>
+          <strong> {{ $errors->first('area') }} </strong>
         </div>
 
 
